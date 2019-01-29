@@ -21,3 +21,11 @@ select yn in "Yes" "No"; do
         No ) break;;
     esac
 done
+
+echo "Do you wish to install Chromium? Choose option 1 or 2"
+select yn in "Yes" "No"; do
+    case $yn in
+        Yes ) echo "Installing Chromium"; yum install -y -q chromium; break;;
+        No ) break;;
+    esac
+done
